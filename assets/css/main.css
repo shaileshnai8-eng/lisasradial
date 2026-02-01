@@ -52,10 +52,58 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
+/* Light Mode Overrides */
+body.light-mode {
+  --background-color: #fdfaf3; /* Warm parchment */
+  --default-color: #2c2c2c;    /* Deep charcoal */
+  --heading-color: #0c0b09;    /* Near black */
+  --surface-color: #ffffff;    /* Pure white surfaces */
+  --contrast-color: #fdfaf3;
+  --nav-color: #2c2c2c;
+  --nav-hover-color: #cda45e;
+  --nav-mobile-background-color: #fdfaf3;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #2c2c2c;
 }
+
+body.light-mode .topbar {
+  background: #fdfaf3;
+  border-bottom: 1px solid #eee;
+}
+
+body.light-mode .header {
+  background: rgba(253, 250, 243, 0.9);
+}
+
+body.light-mode .hero:before {
+  background: rgba(253, 250, 243, 0.4); /* Lighter overlay for light mode */
+}
+
+body.light-mode .hero h2, 
+body.light-mode .hero p {
+  color: #0c0b09;
+}
+
+body.light-mode .footer {
+  background: #fdfaf3;
+  border-top: 1px solid #eee;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  cursor: pointer;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--nav-color);
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-color);
+}
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes

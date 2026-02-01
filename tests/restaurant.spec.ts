@@ -24,4 +24,10 @@ test('has correct restaurant details', async ({ page }) => {
   const menuItem = page.locator('.menu-item').filter({ hasText: 'Blueberry Pancakes' });
   await expect(menuItem).toBeVisible();
   await expect(menuItem).toContainText('$8.95');
+
+  // Check Theme Toggle
+  const toggle = page.locator('#theme-toggle');
+  await toggle.click();
+  await expect(page.locator('body')).toHaveClass(/light-mode/);
+  await expect(page.locator('#theme-icon')).toHaveClass(/bi-sun/);
 });
