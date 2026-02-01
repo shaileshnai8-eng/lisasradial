@@ -98,10 +98,27 @@ body.light-mode .footer {
   font-size: 1.2rem;
   color: var(--nav-color);
   transition: 0.3s;
+  order: 2; /* Ensure it stays between nav and button on desktop */
 }
 
 .theme-toggle:hover {
   color: var(--accent-color);
+}
+
+@media (max-width: 1200px) {
+  .theme-toggle {
+    margin-left: auto;
+    margin-right: 15px;
+    padding: 0;
+  }
+  
+  .hero h2 {
+    font-size: 32px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
 }
 
 
